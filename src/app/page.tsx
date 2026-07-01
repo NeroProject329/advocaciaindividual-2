@@ -314,29 +314,29 @@ function Hero() {
           </div>
         </div>
 
-        <div className="relative flex min-h-[520px] items-end justify-center lg:min-h-[610px]">
-          <div className="absolute bottom-24 right-8 h-[360px] w-[470px] max-w-[95%] rounded-[50%] bg-[#fff1f7]" />
+        <div className="relative flex min-h-[460px] items-end justify-center overflow-hidden lg:min-h-[610px]">
+  <div className="absolute bottom-24 right-8 h-[360px] w-[470px] max-w-[95%] rounded-[50%] bg-[#fff1f7]" />
 
-          <div className="absolute bottom-28 right-[11%] h-[420px] w-[500px] max-w-[95%] rotate-[-10deg] rounded-[48%] border-2 border-[#f5aac9]" />
+  <div className="absolute bottom-28 right-[11%] h-[420px] w-[500px] max-w-[95%] rotate-[-10deg] rounded-[48%] border-2 border-[#f5aac9]" />
 
-          <div className="absolute right-4 top-20 grid grid-cols-5 gap-2 opacity-70">
-            {Array.from({ length: 25 }).map((_, index) => (
-              <span
-                key={index}
-                className="h-1.5 w-1.5 rounded-full bg-[#d7075f]"
-              />
-            ))}
-          </div>
+  <div className="absolute right-4 top-20 grid grid-cols-5 gap-2 opacity-70">
+    {Array.from({ length: 25 }).map((_, index) => (
+      <span
+        key={index}
+        className="h-1.5 w-1.5 rounded-full bg-[#d7075f]"
+      />
+    ))}
+  </div>
 
-          <Image
-            src="/garota-sem-fundo.png"
-            alt="Consultora profissional sorrindo"
-            width={560}
-            height={490}
-            priority
-            className="relative z-10 w-[360px] max-w-full object-contain drop-shadow-[0_28px_65px_rgba(8,13,36,0.12)] sm:w-[430px] lg:w-[520px]"
-          />
-        </div>
+  <Image
+    src="/garota-sem-fundo.png"
+    alt="Consultora segurando celular"
+    width={767}
+    height={1301}
+    priority
+    className="relative z-10 h-[390px] w-auto object-contain drop-shadow-[0_28px_65px_rgba(8,13,36,0.12)] sm:h-[460px] lg:h-[540px] xl:h-[570px]"
+  />
+</div>
       </div>
     </section>
   );
