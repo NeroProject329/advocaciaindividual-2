@@ -1,26 +1,59 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --pink: #d7075f;
+  --pink-dark: #b4044f;
+  --pink-soft: #fff1f7;
+  --pink-border: #ffd2e4;
+  --navy: #080d24;
+  --muted: #667085;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: #ffffff;
+  color: var(--navy);
+  font-family: var(--font-inter), sans-serif;
+}
+
+button,
+a {
+  transition: 0.25s ease;
+}
+
+.container-page {
+  width: min(100% - 40px, 1280px);
+  margin-inline: auto;
+}
+
+.font-display {
+  font-family: var(--font-jakarta), sans-serif;
+}
+
+.hero-bg {
+  background:
+    radial-gradient(circle at 82% 22%, rgba(215, 7, 95, 0.08), transparent 28%),
+    radial-gradient(circle at 18% 86%, rgba(215, 7, 95, 0.04), transparent 24%),
+    #ffffff;
+}
+
+.footer-bg {
+  background:
+    radial-gradient(circle at 18% 10%, rgba(255, 255, 255, 0.14), transparent 28%),
+    radial-gradient(circle at 85% 65%, rgba(255, 255, 255, 0.1), transparent 30%),
+    linear-gradient(135deg, #e50a68 0%, #d7075f 52%, #b4044f 100%);
+}
+
+@media (max-width: 640px) {
+  .container-page {
+    width: min(100% - 28px, 1280px);
+  }
 }
