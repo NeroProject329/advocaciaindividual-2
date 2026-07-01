@@ -14,9 +14,34 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Audit Contabilidade | Assessoria & Consultoria",
+  title: "Rocha Arandas | Assessoria & Consultoria",
   description:
     "Soluções contábeis completas com atendimento humanizado, tecnologia e segurança para sua empresa crescer.",
+  keywords: [
+    "Rocha Arandas",
+    "contabilidade",
+    "assessoria contábil",
+    "consultoria contábil",
+    "abertura de empresa",
+    "departamento pessoal",
+    "consultoria financeira",
+    "Salvador BA",
+  ],
+  authors: [{ name: "Rocha Arandas" }],
+  creator: "Rocha Arandas",
+  publisher: "Rocha Arandas - Sociedade Individual de Advocacia",
+  openGraph: {
+    title: "Rocha Arandas | Assessoria & Consultoria",
+    description:
+      "Soluções contábeis completas com atendimento humanizado, tecnologia e segurança para sua empresa crescer.",
+    type: "website",
+    locale: "pt_BR",
+    siteName: "Rocha Arandas",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

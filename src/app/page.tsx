@@ -7,8 +7,8 @@ import {
   ArrowRight,
   BadgeCheck,
   ChevronDown,
+  FileText,
   Headphones,
-  Mail,
   MapPin,
   Menu,
   MessageCircle,
@@ -23,6 +23,17 @@ import {
 
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { useWhatsApp } from "@/components/providers/WhatsAppProvider";
+
+const company = {
+  name: "Rocha Arandas",
+  fullName: "Rocha Arandas - Sociedade Individual de Advocacia",
+  cnpj: "60.605.583/0001-06",
+  addressLine1: "Praça Conselheiro Almeida Couto, 000622",
+  addressLine2: "Edif. Joia do Jardim, Sala SA 05",
+  district: "Nazaré",
+  cityState: "Salvador - BA",
+  cep: "40050-410",
+};
 
 const stats = [
   {
@@ -100,7 +111,7 @@ const testimonials = [
     name: "Juliana Martins",
     role: "Diretora Financeira, Indústria JM",
     initials: "JM",
-    text: "A Audit Contabilidade transformou a forma como gerenciamos nosso negócio. Atendimento rápido, equipe competente e sempre disposta a ajudar.",
+    text: "A Rocha Arandas transformou a forma como gerenciamos nosso negócio. Atendimento rápido, equipe competente e sempre disposta a ajudar.",
   },
   {
     name: "Carlos Henrique",
@@ -112,13 +123,13 @@ const testimonials = [
     name: "Ricardo Mendes",
     role: "Sócio, Prestação de Serviços",
     initials: "RM",
-    text: "Mais do que contadores, são parceiros do nosso negócio. Recomendo para qualquer empresa que busca crescimento.",
+    text: "Mais do que uma contabilidade, são parceiros do nosso negócio. Recomendo para qualquer empresa que busca crescimento.",
   },
 ];
 
 const faqs = [
   {
-    question: "Quais serviços a Audit Contabilidade oferece?",
+    question: "Quais serviços a Rocha Arandas oferece?",
     answer:
       "Oferecemos abertura de empresa, contabilidade completa, departamento pessoal, fiscal, tributário e consultoria financeira para empresas de diferentes segmentos.",
   },
@@ -159,7 +170,7 @@ function Header() {
   const { loading, open } = useWhatsApp();
 
   const msg = useMemo(() => {
-    return "Olá! Gostaria de falar com um especialista da Audit Contabilidade.";
+    return `Olá! Gostaria de falar com um especialista da ${company.name}.`;
   }, []);
 
   return (
@@ -172,7 +183,7 @@ function Header() {
 
           <span className="leading-tight">
             <strong className="block font-display text-[17px] font-black">
-              Audit Contabilidade
+              {company.name}
             </strong>
             <span className="block text-xs font-medium text-white/85">
               Assessoria & Consultoria
@@ -228,7 +239,7 @@ function Hero() {
   const { loading, open } = useWhatsApp();
 
   const msg = useMemo(() => {
-    return "Olá! Gostaria de saber mais sobre os serviços contábeis da Audit Contabilidade.";
+    return `Olá! Gostaria de saber mais sobre os serviços contábeis da ${company.name}.`;
   }, []);
 
   return (
@@ -276,7 +287,7 @@ function Hero() {
           <div className="mt-8 flex flex-col gap-5 sm:flex-row sm:items-center">
             <div className="flex items-center gap-3">
               <div className="flex -space-x-2">
-                {["A", "B", "C", "D"].map((item) => (
+                {["R", "A", "C", "F"].map((item) => (
                   <span
                     key={item}
                     className="flex h-9 w-9 items-center justify-center rounded-full border-2 border-white bg-[#fff1f7] text-xs font-black text-[#d7075f]"
@@ -608,7 +619,7 @@ function BottomCta() {
   const { loading, open } = useWhatsApp();
 
   const msg = useMemo(() => {
-    return "Olá! Quero levar minha gestão para o próximo nível e falar com um especialista.";
+    return `Olá! Quero levar minha gestão para o próximo nível e falar com um especialista da ${company.name}.`;
   }, []);
 
   return (
@@ -651,7 +662,7 @@ function Footer() {
   return (
     <footer className="footer-bg text-white">
       <div className="container-page py-14">
-        <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr_1fr_1.25fr]">
+        <div className="grid gap-10 lg:grid-cols-[1.1fr_0.85fr_1fr_1.35fr]">
           <div>
             <div className="flex items-center gap-3">
               <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white text-[#d7075f]">
@@ -660,7 +671,7 @@ function Footer() {
 
               <div>
                 <strong className="block font-display text-lg font-black">
-                  Audit Contabilidade
+                  {company.name}
                 </strong>
                 <span className="text-xs text-white/80">
                   Assessoria & Consultoria
@@ -668,7 +679,7 @@ function Footer() {
               </div>
             </div>
 
-            <p className="mt-6 max-w-[270px] text-sm leading-7 text-white/82">
+            <p className="mt-6 max-w-[310px] text-sm leading-7 text-white/82">
               Soluções contábeis completas com foco em pessoas, tecnologia e
               resultados para o seu negócio.
             </p>
@@ -719,26 +730,31 @@ function Footer() {
 
           <div>
             <h3 className="text-xs font-black uppercase tracking-[0.18em]">
-              Fale conosco
+              Dados da empresa
             </h3>
 
             <div className="mt-6 space-y-4 text-sm text-white/82">
-              <p className="flex gap-3">
-                <Headphones size={18} className="shrink-0" />
-                <span>(47) 99999-9999</span>
-              </p>
-
-              <p className="flex gap-3">
-                <Mail size={18} className="shrink-0" />
-                <span>contato@auditcontabilidade.com.br</span>
+              <p className="flex gap-3 leading-7">
+                <FileText size={18} className="mt-1 shrink-0" />
+                <span>
+                  {company.fullName}
+                  <br />
+                  CNPJ: {company.cnpj}
+                </span>
               </p>
 
               <p className="flex gap-3 leading-7">
                 <MapPin size={18} className="mt-1 shrink-0" />
                 <span>
-                  Rua Regimento Barriga Verde, 719 Sala 02
+                  {company.addressLine1}
                   <br />
-                  Centro, Araranguá - SC, 88900-061
+                  {company.addressLine2}
+                  <br />
+                  {company.district}
+                  <br />
+                  {company.cityState}
+                  <br />
+                  CEP: {company.cep}
                 </span>
               </p>
             </div>
@@ -746,13 +762,13 @@ function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col justify-between gap-4 border-t border-white/18 pt-7 text-xs text-white/75 sm:flex-row">
-          <p>© 2025 Audit Contabilidade. Todos os direitos reservados.</p>
+          <p>© 2025 {company.fullName}. Todos os direitos reservados.</p>
 
           <div className="flex gap-8">
-            <a href="#" className="hover:text-white">
+            <a href="/politica-de-privacidade" className="hover:text-white">
               Política de Privacidade
             </a>
-            <a href="#" className="hover:text-white">
+            <a href="/termos-de-uso" className="hover:text-white">
               Termos de Uso
             </a>
           </div>
@@ -792,7 +808,7 @@ function WhatsappButton() {
   const { loading, open } = useWhatsApp();
 
   const msg = useMemo(() => {
-    return "Olá! Gostaria de falar com um especialista da Audit Contabilidade.";
+    return `Olá! Gostaria de falar com um especialista da ${company.name}.`;
   }, []);
 
   return (
