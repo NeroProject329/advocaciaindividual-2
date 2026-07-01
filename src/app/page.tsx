@@ -251,17 +251,15 @@ function Hero() {
           </span>
 
           <h1 className="mt-7 max-w-[690px] font-display text-[43px] font-black leading-[0.96] tracking-[-0.06em] text-[#080d24] sm:text-[56px] lg:text-[68px] xl:text-[72px]">
-            Soluções contábeis
+            Descontos Exclusivos
             <br />
-            que impulsionam o
+            participe do Feirão 2026 e verifique 
             <br />
-            <span className="text-[#d7075f]">seu negócio.</span>
+            <span className="text-[#d7075f]">ofertas especiais.</span>
           </h1>
 
           <p className="mt-7 max-w-[560px] text-base leading-8 text-[#667085] sm:text-lg">
-            Assessoria completa com tecnologia, agilidade e segurança para que
-            você tome decisões com confiança e foque no que realmente importa:
-            crescer.
+            Descontos de até 98%. Fique hoje mesmo no Azul
           </p>
 
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -331,7 +329,7 @@ function Hero() {
           </div>
 
           <Image
-            src="/consultora.png"
+            src="/garota-sem-fundo.png"
             alt="Consultora profissional sorrindo"
             width={560}
             height={690}
@@ -680,8 +678,7 @@ function Footer() {
             </div>
 
             <p className="mt-6 max-w-[310px] text-sm leading-7 text-white/82">
-              Soluções contábeis completas com foco em pessoas, tecnologia e
-              resultados para o seu negócio.
+              Descontos Exclusivos, participe do Feirão 2026 e verifique ofertas especiais.
             </p>
 
             <div className="mt-6 flex gap-3">
