@@ -332,7 +332,7 @@ function Hero() {
             src="/garota-sem-fundo.png"
             alt="Consultora profissional sorrindo"
             width={560}
-            height={690}
+            height={490}
             priority
             className="relative z-10 w-[360px] max-w-full object-contain drop-shadow-[0_28px_65px_rgba(8,13,36,0.12)] sm:w-[430px] lg:w-[520px]"
           />
